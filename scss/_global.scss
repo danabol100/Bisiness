@@ -1,0 +1,18 @@
+:root {
+  --base-font-size: 1rem;
+  --font-family: "Roboto", sans-serif;
+  --second-family: "Inter", sans-serif;
+}
+html {
+  font-size: var(--base-font-size);
+}
+
+body {
+  font-family: var(--font-family);
+}
+[class*="__container"] {
+  width: 100%;
+  max-width: 89.375rem;
+  padding-inline: 0.9375rem;
+  margin-inline: auto;
+}

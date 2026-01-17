@@ -1,0 +1,149 @@
+.page {
+}
+.page__hero {
+  height: 100vh;
+}
+.hero {
+  min-height: 100svh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.hero__bg {
+  position: fixed;
+  width: 100%;
+  min-height: 100%;
+  height: 100vh;
+  z-index: -1;
+}
+.hero__bg img {
+  margin-top: clamp(90px, 5vw, 100px);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  object-fit: cover;
+}
+.hero__container {
+  display: flex;
+  justify-content: flex-start;
+  padding-block: 27.25rem;
+  position: relative;
+}
+.hero__body {
+  max-width: 40.625rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  position: relative;
+}
+.hero__title {
+  font-size: 48px;
+  font-size: clamp(36px, 5vw, 48px);
+  line-height: 1.16;
+  font-weight: 400;
+  margin-bottom: 0.625rem;
+  color: $color-black;
+}
+.hero__title span {
+  display: inline-block;
+  position: relative;
+}
+.hero__title span::after {
+  content: "";
+  position: absolute;
+  bottom: 8px;
+  left: 0;
+  width: 101%;
+  height: 8px;
+  background-color: $color-yellow;
+  z-index: -1;
+}
+.hero__text {
+  font-size: 1.125rem;
+  line-height: 1.66;
+  letter-spacing: 0.02em;
+  margin-bottom: 2.5rem;
+}
+.hero__action {
+  display: flex;
+  gap: 0.9375rem;
+  row-gap: 1.875rem;
+  flex-wrap: wrap;
+}
+.wrapper-btn {
+}
+.btn {
+  position: relative;
+  background-color: $color-yellow;
+  padding-inline: 20px 80px;
+  padding-block: 14px;
+  text-align: center;
+  display: inline-block;
+  font-size: 1.125rem;
+}
+.btn::after {
+  position: absolute;
+  content: "";
+  display: block;
+  background: url("../../assets/arrow-side-icon.svg") no-repeat center center;
+  background-size: contain;
+  width: 0.75rem;
+  height: 0.75rem;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  transition: transform 0.3s ease;
+}
+.contact-block {
+}
+.header__contact-icon {
+}
+.header__text-contact {
+}
+
+@media (max-width: 55.625rem) {
+  .hero__body {
+    max-width: 580px;
+  }
+}
+
+@media (max-width: 48em) {
+  .hero__bg img {
+    margin-top: 60px;
+    object-position: 77% 100%;
+  }
+  .hero__body {
+    max-width: 500px;
+  }
+}
+@media (max-width: 655px) {
+  .hero__body::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: rgb(255, 255, 255, 0.2);
+    backdrop-filter: blur(5);
+    z-index: -1;
+  }
+  .contact-block {
+    border: 1px solid $color-black;
+  }
+}
+@media (max-width: 26.875rem) {
+  .hero__container {
+    justify-content: center;
+  }
+  .hero__body {
+    max-width: 400px;
+    justify-content: center;
+  }
+  .hero__action {
+    justify-content: center;
+  }
+}
