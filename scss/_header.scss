@@ -86,6 +86,7 @@
   position: relative;
   transition: all 0.3s;
 }
+
 .menu__item::before {
   position: absolute;
   content: "";
@@ -139,10 +140,15 @@
   padding: 10px;
   transition: all 0.3s;
 }
-.menu__item:hover .menu__submenu {
+.menu__item:hover:not([data-menu-open]) .menu__submenu {
   visibility: visible;
   opacity: 1;
 }
+.menu__item[data-menu-open] .menu__submenu {
+  visibility: visible;
+  opacity: 0;
+}
+
 .submenu__item a {
   position: relative;
 }

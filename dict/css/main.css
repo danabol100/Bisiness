@@ -271,9 +271,14 @@ button {
   transition: all 0.3s;
 }
 
-.menu__item:hover .menu__submenu {
+.menu__item:hover:not([data-menu-open]) .menu__submenu {
   visibility: visible;
   opacity: 1;
+}
+
+.menu__item[data-menu-open] .menu__submenu {
+  visibility: visible;
+  opacity: 0;
 }
 
 .submenu__item a {
@@ -642,12 +647,12 @@ button {
   color: #000000;
 }
 
-.hero__title span {
+.title-decor {
   display: inline-block;
   position: relative;
 }
 
-.hero__title span::after {
+.title-decor::after {
   content: "";
   position: absolute;
   bottom: 8px;
@@ -738,9 +743,6 @@ button {
     backdrop-filter: blur(5);
     z-index: -1;
   }
-  .contact-block {
-    border: 1px solid #000000;
-  }
 }
 @media (max-width: 26.875rem) {
   .hero__container {
@@ -758,6 +760,171 @@ button {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+  }
+}
+.about {
+  background-color: #ffffff;
+  min-height: 100svh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-block: 3.75rem;
+}
+
+.about__subtitle {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.3);
+  line-height: 1.6;
+}
+
+.about__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 1.875rem;
+}
+
+.about__text-block {
+  max-width: 45rem;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 0px;
+          flex: 1 1 0;
+}
+
+.about__title {
+  font-size: 3rem;
+  line-height: 1.25;
+  margin-bottom: 1.5625rem;
+}
+
+.about__text {
+  font-size: 1.125rem;
+  line-height: 1.33;
+  letter-spacing: 0.02;
+  opacity: 0.7;
+  margin-bottom: clamp(1.25rem, 5vw, 2.8125rem);
+}
+
+.about__text p:not(:last-child) {
+  margin-bottom: clamp(0.9375rem, 5vw, 1.875rem);
+}
+
+.about__action {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.9375rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.about__certificates {
+  text-decoration: underline;
+  font-size: 18px;
+  line-height: 1.66;
+}
+
+.about__benefit {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 2.1875rem;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.benefit__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1.25rem;
+}
+
+.benefit__image {
+  max-width: 3.4375rem;
+  max-height: 3.4375rem;
+}
+
+.benefit__image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.benefit__text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.3125rem;
+  line-height: 1.33;
+}
+
+.benefit__title {
+  font-size: 1.5rem;
+}
+
+.benefit__description {
+  opacity: 0.7;
+  font-size: 1.125rem;
+  max-width: 18.75rem;
+}
+
+@media (max-width: 68.75em) {
+  .about__body {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .about__title {
+    font-size: 36px;
+  }
+}
+@media (max-width: 53.125em) {
+  .about__body {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 50px;
+  }
+  .about__text-block {
+    max-width: 53.125rem;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 0px;
+            flex: 1 1 0;
+  }
+  .about__title {
+    font-size: 34px;
+  }
+}
+@media (max-width: 28.125rem) {
+  .benefit__item {
+    gap: 10px;
+  }
+  .benefit__title {
+    font-size: 20px;
+  }
+  .benefit__description {
+    font-size: 16px;
+    max-width: 15.625rem;
   }
 }
 .footer {
