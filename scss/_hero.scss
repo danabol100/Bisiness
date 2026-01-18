@@ -85,6 +85,12 @@
   text-align: center;
   display: inline-block;
   font-size: 1.125rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.btn:hover {
+  background-color: yellow;
+  outline: 1px solid $color-yellow;
 }
 .btn::after {
   position: absolute;
@@ -95,9 +101,12 @@
   width: 0.75rem;
   height: 0.75rem;
   top: 50%;
-  right: 10px;
+  right: 20px;
   transform: translateY(-50%);
-  transition: transform 0.3s ease;
+  transition: all 0.3s ease;
+}
+.btn:hover::after {
+  right: 10px;
 }
 .contact-block {
 }
