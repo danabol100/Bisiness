@@ -49,10 +49,33 @@
 .btn {
 }
 .about__certificates {
-  text-decoration: underline;
   font-size: 18px;
   line-height: 1.66;
+  transition: all 0.3s;
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 0.0625rem;
+    background-color: $color-black;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: width 0.3s ease;
+  }
+
+  &:hover {
+    transform: scale(1.1);
+    color: $color-hover;
+
+    &::after {
+      width: 100%;
+    }
+  }
 }
+
 .about__benefit {
   display: flex;
   gap: 2.1875rem;
@@ -120,5 +143,9 @@
   .benefit__description {
     font-size: 16px;
     max-width: 15.625rem;
+  }
+  .about__action {
+    display: flex;
+    flex-direction: column;
   }
 }

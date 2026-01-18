@@ -140,13 +140,14 @@
   padding: 10px;
   transition: all 0.3s;
 }
-.menu__item:hover:not([data-menu-open]) .menu__submenu {
+html:not([data-menu-open]) .menu__item:hover .menu__submenu {
   visibility: visible;
   opacity: 1;
 }
-.menu__item[data-menu-open] .menu__submenu {
-  visibility: visible;
+html[data-menu-open] .menu__submenu {
+  visibility: hidden;
   opacity: 0;
+  pointer-events: none;
 }
 
 .submenu__item a {

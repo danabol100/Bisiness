@@ -271,14 +271,15 @@ button {
   transition: all 0.3s;
 }
 
-.menu__item:hover:not([data-menu-open]) .menu__submenu {
+html:not([data-menu-open]) .menu__item:hover .menu__submenu {
   visibility: visible;
   opacity: 1;
 }
 
-.menu__item[data-menu-open] .menu__submenu {
-  visibility: visible;
+html[data-menu-open] .menu__submenu {
+  visibility: hidden;
   opacity: 0;
+  pointer-events: none;
 }
 
 .submenu__item a {
@@ -691,6 +692,7 @@ button {
   cursor: pointer;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
+  min-width: 13.75rem;
 }
 
 .btn:hover {
@@ -827,9 +829,32 @@ button {
 }
 
 .about__certificates {
-  text-decoration: underline;
   font-size: 18px;
   line-height: 1.66;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  position: relative;
+}
+.about__certificates::after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 0.0625rem;
+  background-color: #000000;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  -webkit-transition: width 0.3s ease;
+  transition: width 0.3s ease;
+}
+.about__certificates:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  color: #665d5d;
+}
+.about__certificates:hover::after {
+  width: 100%;
 }
 
 .about__benefit {
@@ -925,6 +950,15 @@ button {
   .benefit__description {
     font-size: 16px;
     max-width: 15.625rem;
+  }
+  .about__action {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
 .footer {
