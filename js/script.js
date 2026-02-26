@@ -36,11 +36,3 @@ buttons.forEach((btn) => {
     document.getElementById(tabId).classList.add("active");
   });
 });
-// Подгоняем высоту wrapper под контент на iOS
-if (navigator.userAgent.match(/iPhone|iPad|iPod/)) {
-  const wrapper = document.querySelector(".what-we-do__wrapper");
-  const body = document.querySelector(".what-we-do__body");
-  if (wrapper && body) {
-    wrapper.style.height = body.offsetHeight + "px";
-  }
-}
