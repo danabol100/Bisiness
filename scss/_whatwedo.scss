@@ -1,7 +1,6 @@
 .what-we-do {
   &__wrapper {
     position: relative;
-    aspect-ratio: 1920/ 648;
   }
   // .what-we-do_subtitle
   &_subtitle {
@@ -17,7 +16,6 @@
     display: flex;
     flex-direction: column;
     @include adaptiveValue(padding-top, 120, 40);
-    min-height: 100%;
   }
 
   // .what-we-do__body

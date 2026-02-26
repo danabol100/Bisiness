@@ -893,7 +893,6 @@ html[data-menu-open] .menu__submenu {
 }
 .what-we-do__wrapper {
   position: relative;
-  aspect-ratio: 1920/648;
 }
 .what-we-do_subtitle {
   font-size: 1.25rem;
@@ -924,9 +923,6 @@ html[data-menu-open] .menu__submenu {
   .what-we-do__container {
     padding-top: 40px;
   }
-}
-.what-we-do__container {
-  min-height: 100%;
 }
 .what-we-do__body {
   position: relative;
