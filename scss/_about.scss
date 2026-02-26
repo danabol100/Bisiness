@@ -2,10 +2,10 @@
 }
 .about {
   background-color: $color-white;
-  min-height: 100svh;
+
   display: flex;
   align-items: center;
-  padding-block: 3.75rem;
+  padding-top: 3.75rem;
 }
 .about__container {
 }
@@ -49,7 +49,7 @@
 .btn {
 }
 .about__certificates {
-  font-size: 18px;
+  font-size: 1.125rem;
   line-height: 1.66;
   transition: all 0.3s;
   position: relative;
@@ -117,31 +117,31 @@
     align-items: center;
   }
   .about__title {
-    font-size: 36px;
+    font-size: 2.25rem;
   }
 }
 @media (max-width: 53.125em) {
   .about__body {
     flex-direction: column;
-    gap: 50px;
+    gap: 3.125rem;
   }
   .about__text-block {
     max-width: 53.125rem;
     flex: 1 1 0;
   }
   .about__title {
-    font-size: 34px;
+    font-size: 2.125rem;
   }
 }
 @media (max-width: 28.125rem) {
   .benefit__item {
-    gap: 10px;
+    gap: 0.625rem;
   }
   .benefit__title {
-    font-size: 20px;
+    font-size: 1.25rem;
   }
   .benefit__description {
-    font-size: 16px;
+    font-size: 1rem;
     max-width: 15.625rem;
   }
   .about__action {

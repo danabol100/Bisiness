@@ -1,0 +1,75 @@
+// кнопка
+.btn {
+  position: relative;
+  background-color: $color-yellow;
+  padding-inline: 1.25rem 5rem;
+  padding-block: 0.875rem;
+  text-align: center;
+  display: inline-block;
+  font-size: 1.125rem;
+  cursor: pointer;
+  transition: all 0.3s;
+  min-width: 13.75rem;
+}
+.btn:hover {
+  background-color: yellow;
+  outline: 0.0625rem solid $color-yellow;
+}
+.btn::after {
+  position: absolute;
+  content: "";
+  display: block;
+  background: url("../../assets/arrow-side-icon.svg") no-repeat center center;
+  background-size: contain;
+  width: 0.75rem;
+  height: 0.75rem;
+  top: 50%;
+  right: 1.25rem;
+  transform: translateY(-50%);
+  transition: all 0.3s ease;
+}
+.btn:hover::after {
+  right: 0.625rem;
+}
+
+// блок контактов
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 0.6875rem;
+  // .contact-item__icon
+  &:hover {
+    .contact-item__icon {
+      animation: shake 0.5s infinite;
+    }
+  }
+
+  &__icon {
+    transition: transform 0.2s;
+  }
+
+  // .contact-item__content
+
+  &__content {
+  }
+
+  // .contact-item__label
+
+  &__label {
+    font-family: $font-secondary;
+    font-size: 0.75rem;
+    line-height: 1.25;
+    & span {
+      font-family: $font-primary;
+      font-weight: 600;
+      font-size: 1rem;
+    }
+  }
+
+  // .contact-item__value
+
+  &__value {
+    line-height: 1.875;
+  }
+}

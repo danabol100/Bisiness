@@ -1,8 +1,11 @@
 @use "_variables" as *;
+@use "mixins" as *;
 @import "fonts.scss";
 @import "global.scss";
 @import "reset.scss";
 @import "header.scss";
 @import "hero.scss";
-@import "_about.scss";
-@import "_footer.scss";
+@import "about.scss";
+@import "whatwedo.scss";
+@import "components.scss";
+@import "footer.scss";

@@ -1,7 +1,7 @@
 .page {
 }
 .page__hero {
-  height: 100vh;
+  min-height: 100svh;
 }
 .hero {
   min-height: 100svh;
@@ -10,17 +10,17 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 }
 .hero__bg {
-  position: fixed;
+  position: absolute;
+  inset: 0;
   width: 100%;
-  min-height: 100%;
-  height: 100vh;
   z-index: -1;
 }
 .hero__bg img {
-  margin-top: clamp(90px, 5vw, 100px);
   position: absolute;
+
   top: 0;
   left: 0;
   width: 100%;
@@ -31,19 +31,19 @@
 .hero__container {
   display: flex;
   justify-content: flex-start;
-  padding-block: 27.25rem;
+  // padding-block: 27.25rem;
   position: relative;
 }
 .hero__body {
+  position: relative;
   max-width: 40.625rem;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  position: relative;
 }
 .hero__title {
-  font-size: 48px;
-  font-size: clamp(36px, 5vw, 48px);
+  font-size: 3rem;
+  font-size: clamp(2.25rem, 5vw, 3rem);
   line-height: 1.16;
   font-weight: 400;
   margin-bottom: 0.625rem;
@@ -56,10 +56,10 @@
 .title-decor::after {
   content: "";
   position: absolute;
-  bottom: 8px;
+  bottom: 0.5rem;
   left: 0;
   width: 101%;
-  height: 8px;
+  height: 0.5rem;
   background-color: $color-yellow;
   z-index: -1;
 }
@@ -77,38 +77,7 @@
 }
 .wrapper-btn {
 }
-.btn {
-  position: relative;
-  background-color: $color-yellow;
-  padding-inline: 20px 80px;
-  padding-block: 14px;
-  text-align: center;
-  display: inline-block;
-  font-size: 1.125rem;
-  cursor: pointer;
-  transition: all 0.3s;
-  min-width: 13.75rem;
-}
-.btn:hover {
-  background-color: yellow;
-  outline: 1px solid $color-yellow;
-}
-.btn::after {
-  position: absolute;
-  content: "";
-  display: block;
-  background: url("../../assets/arrow-side-icon.svg") no-repeat center center;
-  background-size: contain;
-  width: 0.75rem;
-  height: 0.75rem;
-  top: 50%;
-  right: 20px;
-  transform: translateY(-50%);
-  transition: all 0.3s ease;
-}
-.btn:hover::after {
-  right: 10px;
-}
+
 .contact-block {
 }
 .header__contact-icon {
@@ -118,20 +87,19 @@
 
 @media (max-width: 55.625rem) {
   .hero__body {
-    max-width: 580px;
+    max-width: 36.25rem;
   }
 }
 
 @media (max-width: 48em) {
   .hero__bg img {
-    margin-top: 60px;
     object-position: 77% 100%;
   }
   .hero__body {
-    max-width: 500px;
+    max-width: 31.25rem;
   }
 }
-@media (max-width: 655px) {
+@media (max-width: 40.9375em) {
   .hero__body::after {
     position: absolute;
     content: "";
@@ -142,12 +110,12 @@
     z-index: -1;
   }
 }
-@media (max-width: 26.875rem) {
+@media (max-width: 26.875em) {
   .hero__container {
     justify-content: center;
   }
   .hero__body {
-    max-width: 400px;
+    max-width: 25rem;
     justify-content: center;
   }
   .hero__action {

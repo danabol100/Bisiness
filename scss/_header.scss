@@ -1,5 +1,5 @@
 .header {
-  position: fixed;
+  position: sticky;
   top: 0;
   width: 100%;
   z-index: 10;
@@ -19,7 +19,7 @@
   display: block;
   content: "";
   width: 100%;
-  height: 1px;
+  height: 0.0625rem;
   background-color: #ebebeb;
   bottom: 0;
   left: 0;
@@ -27,32 +27,10 @@
 .header__left {
   justify-self: start;
 }
-.contact-block {
-  gap: 0.6875rem;
-}
-.contact-block:hover .header__contact-icon {
-  animation: shake 0.5s infinite;
-}
-.contact-block,
+
 .header__right {
   display: flex;
   align-items: center;
-}
-.header__contact-icon {
-}
-.header__contact-icon img {
-  transition: transform 0.2s;
-}
-
-.header__text-contact {
-}
-.header__text-contact p {
-  font-family: $font-secondary;
-  font-size: 0.75rem;
-  line-height: 1.25;
-}
-.header__text-contact a {
-  line-height: 1.875;
 }
 
 .header__center {
@@ -114,10 +92,10 @@
   display: block;
   background: url("../../assets/arrow-icon.svg") no-repeat center center;
   background-size: contain;
-  width: 16px;
-  height: 16px;
+  width: 1rem;
+  height: 1rem;
   top: 50%;
-  right: -20px;
+  right: -1.25rem;
   transform: translateY(-50%) rotate(0deg);
   transition: transform 0.3s ease;
 }
@@ -126,18 +104,18 @@
 }
 .menu__submenu {
   background-color: rgb(255, 255, 255);
-  box-shadow: 5px 8px 10px #000000;
+  box-shadow: 0.3125rem 0.5rem 0.625rem #000000;
   position: absolute;
   top: 100%;
-  left: -10px;
+  left: -0.625rem;
   opacity: 0;
   visibility: hidden;
-  width: 200px;
+  width: 12.5rem;
   z-index: 1;
   display: flex;
   flex-direction: column;
-  gap: 15px;
-  padding: 10px;
+  gap: 0.9375rem;
+  padding: 0.625rem;
   transition: all 0.3s;
 }
 html:not([data-menu-open]) .menu__item:hover .menu__submenu {
@@ -278,7 +256,7 @@ html[data-menu-open] .menu__submenu {
     left: 100%;
 
     background-color: $color-white;
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(0.3125rem);
     z-index: 1;
     overflow: auto;
     transition: left 0.3s;

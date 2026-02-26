@@ -21,3 +21,18 @@ window.addEventListener("scroll", () => {
     header.classList.remove("header--scroll-state");
   }
 });
+
+const buttons = document.querySelectorAll(".what-we-do__item");
+const items = document.querySelectorAll(".tabs__item");
+
+buttons.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    const tabId = btn.dataset.tab;
+
+    buttons.forEach((b) => b.classList.remove("active"));
+    items.forEach((i) => i.classList.remove("active"));
+
+    btn.classList.add("active");
+    document.getElementById(tabId).classList.add("active");
+  });
+});
