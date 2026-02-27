@@ -4,10 +4,6 @@
   }
   // .what-we-do_subtitle
   &_subtitle {
-    font-size: 1.25rem;
-    font-weight: bold;
-    color: rgba(0, 0, 0, 0.3);
-    line-height: 1.6;
   }
 
   // .what-we-do__container
@@ -41,12 +37,6 @@
   // .what-we-do__text-block
   &__text-block {
     max-width: 920px;
-  }
-
-  // .what-we-do__title
-
-  &__title {
-    @include adaptiveValue(font-size, 48, 16);
   }
 
   // .what-we-do__video

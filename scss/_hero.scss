@@ -49,20 +49,7 @@
   margin-bottom: 0.625rem;
   color: $color-black;
 }
-.title-decor {
-  display: inline-block;
-  position: relative;
-}
-.title-decor::after {
-  content: "";
-  position: absolute;
-  bottom: 0.5rem;
-  left: 0;
-  width: 101%;
-  height: 0.5rem;
-  background-color: $color-yellow;
-  z-index: -1;
-}
+
 .hero__text {
   font-size: 1.125rem;
   line-height: 1.66;
@@ -104,10 +91,11 @@
     position: absolute;
     content: "";
     width: 100%;
-    height: 100%;
-    background-color: rgb(255, 255, 255, 0.2);
+    height: 110%;
+    background-color: rgb(255, 255, 255, 0.3);
     backdrop-filter: blur(5);
     z-index: -1;
+    border-radius: 20px;
   }
 }
 @media (max-width: 26.875em) {

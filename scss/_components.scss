@@ -73,3 +73,34 @@
     line-height: 1.875;
   }
 }
+
+// маркер текста
+.marker {
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+}
+.marker::after {
+  content: "";
+  position: absolute;
+  bottom: 0.5rem;
+  left: 0;
+  width: 101%;
+  height: 0.5rem;
+  background-color: $color-yellow;
+  z-index: -1;
+}
+
+// сабтайтлы
+
+.title {
+  line-height: 1.25;
+
+  @include adaptiveValue(font-size, 48, 26);
+}
+.subtitle {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: rgb(0, 0, 0, 0.3);
+  line-height: 1.6;
+}

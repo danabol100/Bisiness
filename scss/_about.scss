@@ -9,12 +9,7 @@
 }
 .about__container {
 }
-.about__subtitle {
-  font-size: 1.25rem;
-  font-weight: bold;
-  color: rgb(0, 0, 0, 0.3);
-  line-height: 1.6;
-}
+
 .about__body {
   display: flex;
   justify-content: space-between;
@@ -25,10 +20,9 @@
   flex: 1 1 0;
 }
 .about__title {
-  font-size: 3rem;
-  line-height: 1.25;
   margin-bottom: 1.5625rem;
 }
+
 .about__text {
   font-size: 1.125rem;
   line-height: 1.33;
