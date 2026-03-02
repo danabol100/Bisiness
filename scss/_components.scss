@@ -62,8 +62,10 @@
   // .contact-item__content
 
   &__content {
-    @media (max-width: 36.0625em) {
-      display: none;
+    &--mini {
+      @media (max-width: 36.0625em) {
+        display: none;
+      }
     }
   }
   &__link {

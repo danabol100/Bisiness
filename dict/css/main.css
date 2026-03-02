@@ -1610,7 +1610,7 @@ html[data-menu-open] .menu__submenu {
   transition: transform 0.2s, -webkit-transform 0.2s;
 }
 @media (max-width: 36.0625em) {
-  .contact-item__content {
+  .contact-item__content--mini {
     display: none;
   }
 }
