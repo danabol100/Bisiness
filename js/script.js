@@ -87,3 +87,20 @@ function initFooterMenus() {
   }
 }
 initFooterMenus();
+
+const block = document.querySelector(".what-we-do__list");
+let done = false;
+
+window.onscroll = () => {
+  if (done) return;
+
+  const top = block.getBoundingClientRect().top;
+
+  if (top < window.innerHeight) {
+    done = true;
+    block.scrollTo({
+      left: 100,
+      behavior: "smooth",
+    });
+  }
+};
