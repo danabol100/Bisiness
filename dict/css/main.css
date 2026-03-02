@@ -1602,12 +1602,16 @@ html[data-menu-open] .menu__submenu {
   gap: 0.6875rem;
 }
 .contact-item__icon {
-  width: 2.875rem;
-  height: 2.875rem;
+  height: 1.5rem;
+  width: 1.5rem;
   -webkit-transition: -webkit-transform 0.2s;
   transition: -webkit-transform 0.2s;
   transition: transform 0.2s;
   transition: transform 0.2s, -webkit-transform 0.2s;
+}
+.contact-item__icon--big {
+  width: 2.875rem;
+  height: 2.875rem;
 }
 @media (max-width: 36.0625em) {
   .contact-item__content--mini {

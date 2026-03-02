@@ -54,9 +54,13 @@
   }
 
   &__icon {
-    width: 2.875rem;
-    height: 2.875rem;
+    height: 1.5rem;
+    width: 1.5rem;
     transition: transform 0.2s;
+    &--big {
+      width: 2.875rem;
+      height: 2.875rem;
+    }
   }
 
   // .contact-item__content
