@@ -1,3 +1,5 @@
+@use "_variables" as *;
+@use "_mixins" as *;
 .what-we-do {
   &__wrapper {
     position: relative;
@@ -52,6 +54,10 @@
   // .what-we-do__bottom
 
   &__bottom {
+    @media (width < 768px) {
+      margin-left: -15px;
+      margin-right: -15px;
+    }
   }
 
   // .what-we-do__list
@@ -72,7 +78,8 @@
     justify-content: flex-start;
     gap: 20px;
     @include adaptiveValue("padding-block", 25, 10);
-    @include adaptiveValue("padding-inline", 15, 10);
+    // @include adaptiveValue("padding-inline", 15, 10);
+    padding-inline: 15px;
     &.active {
       background-color: #ffffff;
     }

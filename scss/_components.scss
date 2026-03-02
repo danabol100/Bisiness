@@ -1,3 +1,5 @@
+@use "variables.scss" as *;
+@use "mixins.scss" as *;
 // кнопка
 .btn {
   position: relative;
@@ -38,20 +40,34 @@
   display: flex;
   align-items: center;
   gap: 0.6875rem;
+
   // .contact-item__icon
   &:hover {
     .contact-item__icon {
       animation: shake 0.5s infinite;
     }
   }
+  &__wrapper {
+    display: flex;
+    align-items: start;
+    gap: 0.6875rem;
+  }
 
   &__icon {
+    width: 2.875rem;
+    height: 2.875rem;
     transition: transform 0.2s;
   }
 
   // .contact-item__content
 
   &__content {
+    @media (max-width: 36.0625em) {
+      display: none;
+    }
+  }
+  &__link {
+    display: block;
   }
 
   // .contact-item__label
@@ -72,6 +88,8 @@
   &__value {
     line-height: 1.875;
   }
+}
+.map {
 }
 
 // маркер текста

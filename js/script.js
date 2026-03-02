@@ -9,6 +9,37 @@ function documentActions(e) {
   if (targetElement.closest(".menu__item")) {
     document.documentElement.removeAttribute("data-menu-open");
   }
+  if (targetElement.closest(".footer-column__title")) {
+    const currentTitle = targetElement.closest(".footer-column__title");
+    const currentList = currentTitle.nextElementSibling;
+
+    if (window.innerWidth <= 577) {
+      const activeTitle = document.querySelector(
+        ".footer-column__title[data-footer-menu-open]",
+      );
+
+      // закрыть уже открытый
+      if (activeTitle && activeTitle !== currentTitle) {
+        activeTitle.removeAttribute("data-footer-menu-open");
+        activeTitle.nextElementSibling.style.height = "0px";
+      }
+
+      // toggle текущий
+      currentTitle.toggleAttribute("data-footer-menu-open");
+
+      if (currentTitle.hasAttribute("data-footer-menu-open")) {
+        currentList.style.height = "";
+        const height = currentList.offsetHeight;
+
+        currentList.style.height = "0px";
+        currentList.offsetHeight;
+
+        currentList.style.height = height + "px";
+      } else {
+        currentList.style.height = "0px";
+      }
+    }
+  }
 }
 
 const header = document.querySelector(".header");
@@ -36,3 +67,23 @@ buttons.forEach((btn) => {
     document.getElementById(tabId).classList.add("active");
   });
 });
+function initFooterMenus() {
+  const footerMenus = document.querySelectorAll(".footer-column__list");
+  if (footerMenus.length) {
+    const matchMedia = window.matchMedia(`(width <= 36.0625em)`);
+    matchMedia.addEventListener("change", function () {
+      setFooterMenus(matchMedia.matches);
+    });
+    function setFooterMenus() {
+      footerMenus.forEach((footerMenu) => {
+        if (matchMedia.matches) {
+          footerMenu.style.cssText += `height: 0;`;
+        } else {
+          footerMenu.style.cssText = ``;
+        }
+      });
+    }
+    setFooterMenus();
+  }
+}
+initFooterMenus();
