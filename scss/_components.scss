@@ -16,6 +16,7 @@
 .btn:hover {
   background-color: yellow;
   outline: 0.0625rem solid $color-yellow;
+  border-radius: 1.25rem;
 }
 .btn::after {
   position: absolute;
@@ -72,8 +73,11 @@
       }
     }
   }
+  // .contact-item__link
   &__link {
     display: block;
+    font-size: 13px;
+    text-decoration: underline;
   }
 
   // .contact-item__label

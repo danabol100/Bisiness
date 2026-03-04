@@ -48,7 +48,7 @@
   &__list {
     display: flex;
     flex-wrap: wrap;
-    gap: 16px;
+    gap: 40px 16px;
   }
 
   // .process__item
@@ -91,7 +91,7 @@
     opacity: 0.7;
     max-width: 317px;
     line-height: 1.33;
-    @include adaptiveValue(margin-bottom, 26, 20);
+    @include adaptiveValue(margin-bottom, 26, 10);
   }
 
   // .process__item-link

@@ -4,9 +4,6 @@
   &__wrapper {
     position: relative;
   }
-  // .what-we-do_subtitle
-  &_subtitle {
-  }
 
   // .what-we-do__container
 
@@ -77,6 +74,7 @@
     align-items: center;
     justify-content: flex-start;
     gap: 20px;
+    cursor: pointer;
     @include adaptiveValue("padding-block", 25, 10);
     // @include adaptiveValue("padding-inline", 15, 10);
     padding-inline: 15px;

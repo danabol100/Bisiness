@@ -1,8 +1,12 @@
 @use "_variables" as *;
+@use "mixins.scss" as *;
+
 .page {
-}
-.page__hero {
-  min-height: 100svh;
+  // .page__hero
+
+  &__hero {
+    min-height: 100svh;
+  }
 }
 .hero {
   min-height: 100svh;
@@ -12,102 +16,128 @@
   align-items: center;
   justify-content: center;
   overflow: hidden;
-}
-.hero__bg {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  z-index: -1;
-}
-.hero__bg img {
-  position: absolute;
 
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  min-height: 100vh;
-  object-fit: cover;
-}
-.hero__container {
-  display: flex;
-  justify-content: flex-start;
-  // padding-block: 27.25rem;
-  position: relative;
-}
-.hero__body {
-  position: relative;
-  max-width: 40.625rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-}
-.hero__title {
-  font-size: 3rem;
-  font-size: clamp(2.25rem, 5vw, 3rem);
-  line-height: 1.16;
-  font-weight: 400;
-  margin-bottom: 0.625rem;
-  color: $color-black;
-}
+  // .hero__bg
 
-.hero__text {
-  font-size: 1.125rem;
-  line-height: 1.66;
-  letter-spacing: 0.02em;
-  margin-bottom: 2.5rem;
+  &__bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    z-index: -1;
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      min-height: 100vh;
+      object-fit: cover;
+      @media (max-width: 48em) {
+        object-position: 77% 100%;
+      }
+    }
+  }
+
+  // .hero__container
+
+  &__container {
+    display: flex;
+    justify-content: flex-start;
+    // padding-block: 27.25rem;
+    position: relative;
+    @media (max-width: 26.875em) {
+      justify-content: center;
+    }
+  }
+
+  // .hero__body
+
+  &__body {
+    position: relative;
+    max-width: 40.625rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    @media (max-width: 55.625rem) {
+      max-width: 36.25rem;
+    }
+    @media (max-width: 48em) {
+      max-width: 31.25rem;
+    }
+    @media (max-width: 26.875em) {
+      justify-content: center;
+      max-width: 25rem;
+    }
+    &::after {
+      @media (max-width: 40.9375em) {
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 110%;
+        background-color: rgb(255, 255, 255, 0.3);
+        backdrop-filter: blur(5);
+        z-index: -1;
+        border-radius: 20px;
+      }
+    }
+  }
+
+  // .hero__title
+
+  &__title {
+    font-size: 3rem;
+    font-size: clamp(2.25rem, 5vw, 3rem);
+    line-height: 1.16;
+    font-weight: 400;
+    margin-bottom: 0.625rem;
+    color: $color-black;
+  }
+
+  // .hero__text
+
+  &__text {
+    font-size: 1.125rem;
+    line-height: 1.66;
+    letter-spacing: 0.02em;
+    margin-bottom: 2.5rem;
+  }
+
+  // .hero__action
+
+  &__action {
+    display: flex;
+    gap: 0.9375rem;
+    row-gap: 1.875rem;
+    flex-wrap: wrap;
+    @media (max-width: 26.875em) {
+      justify-content: center;
+    }
+  }
 }
-.hero__action {
-  display: flex;
-  gap: 0.9375rem;
-  row-gap: 1.875rem;
-  flex-wrap: wrap;
+.marker {
 }
 .wrapper-btn {
 }
+.btn {
+}
+.contact-item {
+  // .contact-item__icon
 
-.contact-block {
-}
-.header__contact-icon {
-}
-.header__text-contact {
-}
+  &__icon {
+  }
 
-@media (max-width: 55.625rem) {
-  .hero__body {
-    max-width: 36.25rem;
-  }
-}
+  // .contact-item__content
 
-@media (max-width: 48em) {
-  .hero__bg img {
-    object-position: 77% 100%;
+  &__content {
   }
-  .hero__body {
-    max-width: 31.25rem;
+
+  // .contact-item__label
+
+  &__label {
   }
-}
-@media (max-width: 40.9375em) {
-  .hero__body::after {
-    position: absolute;
-    content: "";
-    width: 100%;
-    height: 110%;
-    background-color: rgb(255, 255, 255, 0.3);
-    backdrop-filter: blur(5);
-    z-index: -1;
-    border-radius: 20px;
-  }
-}
-@media (max-width: 26.875em) {
-  .hero__container {
-    justify-content: center;
-  }
-  .hero__body {
-    max-width: 25rem;
-    justify-content: center;
-  }
-  .hero__action {
-    justify-content: center;
+
+  // .contact-item__value
+
+  &__value {
   }
 }

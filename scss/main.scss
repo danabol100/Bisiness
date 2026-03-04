@@ -9,4 +9,10 @@
 @use "whatwedo.scss";
 @use "components.scss" as *;
 @use "process.scss";
+@use "news.scss";
 @use "footer.scss";
+
+:root {
+  --hero-margin: clamp(60px, 8vw, 130px);
+  --header-offset: 4.375rem;
+}
