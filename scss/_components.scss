@@ -2,16 +2,21 @@
 @use "mixins.scss" as *;
 // кнопка
 .btn {
+  max-width: 220px;
   position: relative;
   background-color: $color-yellow;
-  padding-inline: 1.25rem 5rem;
+  padding-inline: 29px;
   padding-block: 0.875rem;
-  text-align: center;
+
+  text-align: start;
   display: inline-block;
   font-size: 1.125rem;
   cursor: pointer;
   transition: all 0.3s;
   min-width: 13.75rem;
+  &--mini {
+    font-size: 16px;
+  }
 }
 .btn:hover {
   background-color: yellow;

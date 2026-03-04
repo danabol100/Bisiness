@@ -1566,17 +1566,21 @@ html[data-menu-open] .menu__submenu {
 }
 
 .btn {
+  max-width: 220px;
   position: relative;
   background-color: #fcd900;
-  padding-inline: 1.25rem 5rem;
+  padding-inline: 29px;
   padding-block: 0.875rem;
-  text-align: center;
+  text-align: start;
   display: inline-block;
   font-size: 1.125rem;
   cursor: pointer;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
   min-width: 13.75rem;
+}
+.btn--mini {
+  font-size: 16px;
 }
 
 .btn:hover {
