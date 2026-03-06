@@ -2,10 +2,10 @@
 @use "mixins.scss" as *;
 // кнопка
 .btn {
-  max-width: 220px;
+  max-width: 13.75rem;
   position: relative;
   background-color: $color-yellow;
-  padding-inline: 29px;
+  padding-inline: 1.8125rem;
   padding-block: 0.875rem;
 
   text-align: start;
@@ -15,29 +15,34 @@
   transition: all 0.3s;
   min-width: 13.75rem;
   &--mini {
-    font-size: 16px;
+    font-size: 1rem;
   }
-}
-.btn:hover {
-  background-color: yellow;
-  outline: 0.0625rem solid $color-yellow;
-  border-radius: 1.25rem;
-}
-.btn::after {
-  position: absolute;
-  content: "";
-  display: block;
-  background: url("../../assets/arrow-side-icon.svg") no-repeat center center;
-  background-size: contain;
-  width: 0.75rem;
-  height: 0.75rem;
-  top: 50%;
-  right: 1.25rem;
-  transform: translateY(-50%);
-  transition: all 0.3s ease;
-}
-.btn:hover::after {
-  right: 0.625rem;
+
+  &::after {
+    position: absolute;
+    content: "";
+    display: block;
+    background: url("../../assets/arrow-side-icon.svg") no-repeat center center;
+    background-size: contain;
+    width: 0.75rem;
+    height: 0.75rem;
+    top: 50%;
+    right: 1.25rem;
+    transform: translateY(-50%);
+    transition: all 0.3s ease;
+  }
+
+  html:not([data-fls-touch]) & {
+    &:hover {
+      background-color: yellow;
+      outline: 0.0625rem solid $color-yellow;
+      border-radius: 1.25rem;
+
+      &::after {
+        right: 0.625rem;
+      }
+    }
+  }
 }
 
 // блок контактов
@@ -81,7 +86,7 @@
   // .contact-item__link
   &__link {
     display: block;
-    font-size: 13px;
+    font-size: 0.8125rem;
     text-decoration: underline;
   }
 
@@ -119,7 +124,7 @@
   bottom: 0.5rem;
   left: 0;
   width: 101%;
-  height: 0.5rem;
+  height: 0.2em;
   background-color: $color-yellow;
   z-index: -1;
 }

@@ -41,11 +41,6 @@
   // .what-we-do__video
 
   &__video {
-    padding-top: 40px;
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    @include adaptiveValue(padding-right, 75, 20);
   }
 
   // .what-we-do__bottom
@@ -80,6 +75,11 @@
     padding-inline: 15px;
     &.active {
       background-color: #ffffff;
+    }
+    html:not([data-fls-touch]) & {
+      &:hover {
+        background-color: #ffffff;
+      }
     }
 
     @media (width < 768px) {
@@ -126,7 +126,29 @@
   }
 }
 .video {
-  flex: 0 0 auto;
+  padding-top: 40px;
+  @include adaptiveValue(padding-right, 75, 20);
+  cursor: pointer;
+  html:not([data-fls-touch]) & {
+    &:hover {
+      .video__logo {
+        transform: scale(1.1);
+        transition: transform 0.3s ease;
+      }
+      .video__title {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  // .video___link
+  &__link {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex: 0 0 auto;
+  }
+
   // .video__logo
 
   &__logo {
@@ -223,12 +245,14 @@
     @include adaptiveValue(font-size, 18, 16);
     line-height: 1.66;
     max-width: 852px;
+
     a {
       display: inline-flex;
       align-items: baseline;
       color: #035397;
       font-weight: 600;
       position: relative;
+
       &::after {
         content: "";
         display: inline-block;
@@ -236,21 +260,23 @@
         background-size: contain;
         width: 12px;
         height: 12px;
-
         margin-left: 5px;
-
-        transition: all 0.3s ease;
+        transition: transform 0.3s ease;
       }
+
       &::first-letter {
         font-size: 1.5em;
         line-height: 1;
       }
-      &:hover {
-        text-decoration: underline;
-      }
-      &:hover::after {
-        transform: translateX(2px);
-        text-decoration: line-through;
+
+      html:not([data-fls-touch]) & {
+        &:hover {
+          text-decoration: underline;
+
+          &::after {
+            transform: translateX(2px);
+          }
+        }
       }
     }
   }
@@ -273,9 +299,11 @@
     flex-direction: column;
     gap: 10px;
 
-    &:hover {
-      .tabs__image-text {
-        text-decoration: underline;
+    html:not([data-fls-touch]) & {
+      &:hover {
+        .tabs__image-text {
+          text-decoration: underline;
+        }
       }
     }
   }

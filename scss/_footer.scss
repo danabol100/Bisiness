@@ -219,12 +219,17 @@
     overflow: hidden;
     transition: height 0.3s ease;
   }
+  // .footer-column__item
   &__item {
     font-size: 1rem;
+    transition: text-decoration 0.3s ease;
+    html:not([data-fls-touch]) & {
+      &:hover {
+        text-decoration: underline;
+      }
+    }
   }
 }
-
-// .footer-column__item
 
 .wrapper-btn {
 }

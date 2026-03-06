@@ -78,8 +78,10 @@
   &__certificates {
     font-size: 1.125rem;
     line-height: 1.66;
-    transition: all 0.3s;
     position: relative;
+    transition:
+      transform 0.3s ease,
+      color 0.3s ease;
 
     &::after {
       position: absolute;
@@ -93,11 +95,13 @@
       transition: width 0.3s ease;
     }
 
-    &:hover {
-      transform: scale(1.1);
-      color: $color-hover;
+    html:not([data-fls-touch]) & {
+      &:hover {
+        transform: scale(1.1);
+        color: $color-hover;
+      }
 
-      &::after {
+      &:hover::after {
         width: 100%;
       }
     }

@@ -86,23 +86,26 @@
 
 .menu__arrow {
   position: relative;
+  display: inline-block;
+  &::after {
+    position: absolute;
+    content: "";
+    display: block;
+    background: url("../../assets/arrow-icon.svg") no-repeat center center;
+    background-size: contain;
+    width: 1rem;
+    height: 1rem;
+    top: 50%;
+    right: -1.25rem;
+    transform: translateY(-50%) rotate(0deg);
+    transition: transform 0.3s ease;
+  }
+
+  &:hover::after {
+    transform: translateY(-50%) rotate(-180deg);
+  }
 }
-.menu__arrow::after {
-  position: absolute;
-  content: "";
-  display: block;
-  background: url("../../assets/arrow-icon.svg") no-repeat center center;
-  background-size: contain;
-  width: 1rem;
-  height: 1rem;
-  top: 50%;
-  right: -1.25rem;
-  transform: translateY(-50%) rotate(0deg);
-  transition: transform 0.3s ease;
-}
-.menu__arrow:hover::after {
-  transform: translateY(-50%) rotate(-180deg);
-}
+
 .menu__submenu {
   background-color: rgb(255, 255, 255);
   box-shadow: 0.3125rem 0.5rem 0.625rem #000000;
@@ -112,7 +115,7 @@
   opacity: 0;
   visibility: hidden;
   width: 12.5rem;
-  z-index: 1;
+  z-index: 3;
   display: flex;
   flex-direction: column;
   gap: 0.9375rem;
@@ -124,9 +127,9 @@ html:not([data-menu-open]) .menu__item:hover .menu__submenu {
   opacity: 1;
 }
 html[data-menu-open] .menu__submenu {
-  visibility: hidden;
-  opacity: 0;
-  pointer-events: none;
+  // visibility: hidden;
+  // opacity: 0;
+  // pointer-events: none;
 }
 
 .submenu__item a {
@@ -169,6 +172,9 @@ html[data-menu-open] .menu__submenu {
 .language__switcher {
   display: flex;
   gap: 0.375rem;
+  html:not([data-fls-touch]) & {
+    cursor: pointer;
+  }
 }
 .language__icon {
 }
@@ -215,6 +221,9 @@ html[data-menu-open] .menu__submenu {
   .header__wrapper {
     display: flex;
     justify-content: space-between;
+  }
+  .header__menu {
+    justify-content: center;
   }
   .header__left,
   .header__icons-social {
@@ -266,9 +275,10 @@ html[data-menu-open] .menu__submenu {
     z-index: 1;
     overflow: auto;
     transition: left 0.3s;
-    padding: 9.375rem 0.9375rem 1.875rem 0.9375rem;
+    // padding: 9.375rem 0.9375rem 1.875rem 0.9375rem;
     flex-direction: column;
     gap: 3rem;
+    padding: 100px 10px 0 0;
   }
   .menu::before {
     content: "";
@@ -287,12 +297,13 @@ html[data-menu-open] .menu__submenu {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    text-align: center;
     column-gap: 2.5rem;
     font-size: 1.875rem;
     flex-wrap: wrap;
   }
-  .menu__item::after {
+
+  .menu__item::before {
     content: none;
   }
 
@@ -319,16 +330,49 @@ html[data-menu-open] .menu__submenu {
   [data-menu-open] .menu::before {
     z-index: -1;
     left: 0;
-    top: 60px;
   }
   [data-menu-open] .mobile__icons,
   [data-menu-open] .mobile__phone {
     display: flex;
     gap: 1.25rem;
   }
+
   .menu__arrow::after {
-    display: none;
+    width: 30px;
+    height: 30px;
+    right: -2rem;
+    top: 50%;
+    transform: translateY(-70%);
   }
+  .menu__submenu {
+    position: relative;
+    top: 0;
+    opacity: 1;
+    visibility: visible;
+    box-shadow: none;
+    padding: 0;
+    overflow: hidden;
+    height: 0;
+    transition: height 0.3s ease;
+    // width: 100%;
+    font-size: 1rem;
+    flex-basis: 1;
+    flex-grow: 1;
+  }
+  .menu__item.submenu-open .menu__submenu {
+    padding: 10px;
+  }
+  .menu__arrow {
+    position: relative;
+    margin-left: auto; // чтобы стрелка была справа
+    cursor: pointer;
+  }
+  .menu__item.submenu-open .menu__arrow::after {
+    transform: translateY(-50%) rotate(-180deg);
+  }
+  // .menu__item.submenu-open .menu__submenu {
+  //   max-height: 1000px; // раскрываем подменю
+  // }
 }
 
 @keyframes shake {
@@ -362,3 +406,5 @@ html[data-menu-open] .menu__submenu {
   // backdrop-filter: blur(80px);
   background-color: rgba(231, 228, 228, 0.9);
 }
+
+// ai
