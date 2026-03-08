@@ -38,11 +38,6 @@
     max-width: 920px;
   }
 
-  // .what-we-do__video
-
-  &__video {
-  }
-
   // .what-we-do__bottom
 
   &__bottom {
@@ -76,9 +71,11 @@
     &.active {
       background-color: #ffffff;
     }
-    html:not([data-fls-touch]) & {
-      &:hover {
-        background-color: #ffffff;
+    @media (hover: hover) {
+      & {
+        &:hover {
+          background-color: #ffffff;
+        }
       }
     }
 
@@ -129,14 +126,16 @@
   padding-top: 40px;
   @include adaptiveValue(padding-right, 75, 20);
   cursor: pointer;
-  html:not([data-fls-touch]) & {
-    &:hover {
-      .video__logo {
-        transform: scale(1.1);
-        transition: transform 0.3s ease;
-      }
-      .video__title {
-        text-decoration: underline;
+  @media (hover: hover) {
+    & {
+      &:hover {
+        .video__logo {
+          transform: scale(1.1);
+          transition: transform 0.3s ease;
+        }
+        .video__title {
+          text-decoration: underline;
+        }
       }
     }
   }
@@ -269,12 +268,14 @@
         line-height: 1;
       }
 
-      html:not([data-fls-touch]) & {
-        &:hover {
-          text-decoration: underline;
+      @media (hover: hover) {
+        & {
+          &:hover {
+            text-decoration: underline;
 
-          &::after {
-            transform: translateX(2px);
+            &::after {
+              transform: translateX(2px);
+            }
           }
         }
       }
@@ -299,10 +300,12 @@
     flex-direction: column;
     gap: 10px;
 
-    html:not([data-fls-touch]) & {
-      &:hover {
-        .tabs__image-text {
-          text-decoration: underline;
+    @media (hover: hover) {
+      & {
+        &:hover {
+          .tabs__image-text {
+            text-decoration: underline;
+          }
         }
       }
     }

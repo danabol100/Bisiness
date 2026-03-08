@@ -95,14 +95,16 @@
       transition: width 0.3s ease;
     }
 
-    html:not([data-fls-touch]) & {
-      &:hover {
-        transform: scale(1.1);
-        color: $color-hover;
-      }
+    @media (hover: hover) {
+      & {
+        &:hover {
+          transform: scale(1.1);
+          color: $color-hover;
+        }
 
-      &:hover::after {
-        width: 100%;
+        &:hover::after {
+          width: 100%;
+        }
       }
     }
   }

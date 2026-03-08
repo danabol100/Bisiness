@@ -84,9 +84,11 @@
       transition: opacity 0.3s ease;
     }
 
-    html:not([data-fls-touch]) & {
-      &:hover a::after {
-        opacity: 1;
+    @media (hover: hover) {
+      & {
+        &:hover a::after {
+          opacity: 1;
+        }
       }
     }
   }
@@ -136,13 +138,14 @@
       margin-left: 11px;
       transition: transform 0.3s ease;
     }
+    @media (hover: hover) {
+      & {
+        &:hover {
+          text-decoration: underline;
 
-    html:not([data-fls-touch]) & {
-      &:hover {
-        text-decoration: underline;
-
-        &::after {
-          transform: translateX(2px);
+          &::after {
+            transform: translateX(2px);
+          }
         }
       }
     }

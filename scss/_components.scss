@@ -32,14 +32,16 @@
     transition: all 0.3s ease;
   }
 
-  html:not([data-fls-touch]) & {
-    &:hover {
-      background-color: yellow;
-      outline: 0.0625rem solid $color-yellow;
-      border-radius: 1.25rem;
+  @media (hover: hover) {
+    & {
+      &:hover {
+        background-color: yellow;
+        outline: 0.0625rem solid $color-yellow;
+        border-radius: 1.25rem;
 
-      &::after {
-        right: 0.625rem;
+        &::after {
+          right: 0.625rem;
+        }
       }
     }
   }
@@ -53,9 +55,11 @@
   gap: 0.6875rem;
 
   // .contact-item__icon
-  &:hover {
-    .contact-item__icon {
-      animation: shake 0.5s infinite;
+  @media (hover: hover) {
+    &:hover {
+      .contact-item__icon {
+        animation: shake 0.5s infinite;
+      }
     }
   }
   &__wrapper {
