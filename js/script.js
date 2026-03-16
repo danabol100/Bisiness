@@ -59,6 +59,24 @@ function load() {
       }
     }
   }
+  const block = document.querySelector(".what-we-do__list");
+  if (block) {
+    let done = false;
+
+    window.addEventListener("scroll", () => {
+      if (done) return;
+
+      const top = block.getBoundingClientRect().top;
+
+      if (top < window.innerHeight) {
+        done = true;
+        block.scrollTo({
+          left: 100,
+          behavior: "smooth",
+        });
+      }
+    });
+  }
 }
 
 const header = document.querySelector(".header");
@@ -122,20 +140,3 @@ function initFooterMenus() {
 initFooterMenus();
 addTouchAttr();
 initSubMenu();
-
-const block = document.querySelector(".what-we-do__list");
-let done = false;
-
-window.addEventListener("scroll", () => {
-  if (done) return;
-
-  const top = block.getBoundingClientRect().top;
-
-  if (top < window.innerHeight) {
-    done = true;
-    block.scrollTo({
-      left: 100,
-      behavior: "smooth",
-    });
-  }
-});

@@ -13,6 +13,6 @@
 @use "footer.scss";
 
 :root {
-  --hero-margin: clamp(60px, 8vw, 130px);
+  --hero-margin: clamp(3.75rem, 8vw, 8.125rem);
   --header-offset: 4.375rem;
 }

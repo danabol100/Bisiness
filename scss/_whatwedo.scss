@@ -30,20 +30,20 @@
     justify-content: space-between;
     line-height: 1.25;
     align-items: start;
-    gap: 20px;
+    gap: 1.25rem;
     flex-wrap: wrap;
   }
   // .what-we-do__text-block
   &__text-block {
-    max-width: 920px;
+    max-width: 57.5rem;
   }
 
   // .what-we-do__bottom
 
   &__bottom {
-    @media (width < 768px) {
-      margin-left: -15px;
-      margin-right: -15px;
+    @media (width < 48em) {
+      margin-left: -0.9375rem;
+      margin-right: -0.9375rem;
     }
   }
 
@@ -57,17 +57,17 @@
   // .what-we-do__item
 
   &__item {
-    max-width: 220px;
-    flex: 1 0 220px;
+    max-width: 13.75rem;
+    flex: 1 0 13.75rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    gap: 20px;
+    gap: 1.25rem;
     cursor: pointer;
     @include adaptiveValue("padding-block", 25, 10);
     // @include adaptiveValue("padding-inline", 15, 10);
-    padding-inline: 15px;
+    padding-inline: 0.9375rem;
     &.active {
       background-color: #ffffff;
     }
@@ -79,8 +79,8 @@
       }
     }
 
-    @media (width < 768px) {
-      flex: 1 0 200px;
+    @media (width < 48em) {
+      flex: 1 0 12.5rem;
     }
   }
 
@@ -108,7 +108,7 @@
       bottom: 0;
       left: 0;
       width: 100%;
-      height: 50px;
+      height: 3.125rem;
       background: linear-gradient(to top, rgba(0, 0, 0, 0.07), transparent);
       pointer-events: none;
     }
@@ -123,7 +123,7 @@
   }
 }
 .video {
-  padding-top: 40px;
+  padding-top: 2.5rem;
   @include adaptiveValue(padding-right, 75, 20);
   cursor: pointer;
   @media (hover: hover) {
@@ -144,7 +144,7 @@
   &__link {
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 0.9375rem;
     flex: 0 0 auto;
   }
 
@@ -168,7 +168,7 @@
   // .video__description
 
   &__description {
-    font-size: 14px;
+    font-size: 0.875rem;
     line-height: 1.71;
     color: #818181;
   }
@@ -188,7 +188,7 @@
   &__item {
     opacity: 0;
     visibility: hidden;
-    transform: translateY(20px);
+    transform: translateY(1.25rem);
     transition:
       opacity 0.4s ease,
       transform 0.4s ease,
@@ -211,8 +211,8 @@
   &__body {
     display: flex;
     justify-content: space-between;
-    gap: 40px;
-    @media (width < 768px) {
+    gap: 2.5rem;
+    @media (width < 48em) {
       flex-direction: column;
     }
   }
@@ -243,7 +243,7 @@
     align-items: center;
     @include adaptiveValue(font-size, 18, 16);
     line-height: 1.66;
-    max-width: 852px;
+    max-width: 53.25rem;
 
     a {
       display: inline-flex;
@@ -257,9 +257,9 @@
         display: inline-block;
         background: url("../../assets/arrow-link.svg") no-repeat center center;
         background-size: contain;
-        width: 12px;
-        height: 12px;
-        margin-left: 5px;
+        width: 0.75rem;
+        height: 0.75rem;
+        margin-left: 0.3125rem;
         transition: transform 0.3s ease;
       }
 
@@ -274,7 +274,7 @@
             text-decoration: underline;
 
             &::after {
-              transform: translateX(2px);
+              transform: translateX(0.125rem);
             }
           }
         }
@@ -288,7 +288,7 @@
     display: flex;
     @include adaptiveValue(gap, 30, 10);
     flex-wrap: wrap;
-    @media (width < 768px) {
+    @media (width < 48em) {
       display: none;
     }
   }
@@ -298,7 +298,7 @@
   &__gallery-item {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 0.625rem;
 
     @media (hover: hover) {
       & {
@@ -313,7 +313,7 @@
 
   &__picture {
     width: 100%;
-    max-width: 290px;
+    max-width: 18.125rem;
     aspect-ratio: 290 / 192;
     overflow: hidden;
   }
@@ -331,7 +331,7 @@
 
   &__image-text {
     text-align: center;
-    font-size: 18px;
+    font-size: 1.125rem;
   }
 
   // .tabs__bottom
@@ -346,15 +346,15 @@
 }
 .calendar {
   position: relative;
-  min-width: 340px;
+  min-width: 21.25rem;
   flex: 0 0 auto;
   background-color: #fafafa;
-  border: 1px solid #dfdfdf;
+  border: 0.0625rem solid #dfdfdf;
   display: flex;
   align-items: center;
   @include adaptiveValue(gap, 60, 10);
   @include adaptiveValue(padding, 30, 10, 40, 10);
-  @media (width < 768px) {
+  @media (width < 48em) {
     min-width: 0;
     flex: 1 1 auto;
     width: 100%;
@@ -364,7 +364,7 @@
     content: "";
     position: absolute;
     width: 100%;
-    height: 4px;
+    height: 0.25rem;
     background-color: rgb(208, 208, 3);
     bottom: 0;
     left: 0;
@@ -372,14 +372,14 @@
   // .calendar__content
 
   &__content {
-    max-width: 150px;
+    max-width: 9.375rem;
   }
 
   // .calendar__context-text
   &__content-text {
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    gap: 0.3125rem;
   }
 
   // .calendar__title
@@ -392,15 +392,15 @@
   // .calendar__online
 
   &__online {
-    font-size: 14px;
+    font-size: 0.875rem;
     line-height: 2;
     &::after {
       content: "";
       display: inline-block;
-      width: 8px;
-      height: 8px;
+      width: 0.5rem;
+      height: 0.5rem;
       background-color: #28cba4;
-      margin-left: 5px;
+      margin-left: 0.3125rem;
       border-radius: 50%;
     }
   }
@@ -408,9 +408,9 @@
   // .calendar__icon
 
   &__icon {
-    width: 57px;
-    height: 57px;
-    flex: 0 0 57px;
+    width: 3.5625rem;
+    height: 3.5625rem;
+    flex: 0 0 3.5625rem;
   }
 
   // .calendar__image
@@ -419,7 +419,7 @@
   }
 }
 .contact {
-  max-width: 340px;
+  max-width: 21.25rem;
   display: flex;
   flex-direction: column;
   @include adaptiveValue(gap, 20, 10);

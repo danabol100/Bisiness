@@ -42,11 +42,11 @@
   &__top {
     display: flex;
     justify-content: space-between;
-    gap: 20px;
+    gap: 1.25rem;
     flex-wrap: wrap;
     @media (max-width: 36.0625em) {
       flex-direction: column;
-      gap: 25px;
+      gap: 1.5625rem;
     }
   }
 
@@ -64,7 +64,7 @@
     @include adaptiveValue(gap, 18, 10);
     flex-wrap: wrap;
     @media (max-width: 36.0625em) {
-      gap: 25px;
+      gap: 1.5625rem;
     }
   }
 
@@ -116,12 +116,11 @@
     @include adaptiveValue(gap, 80, 30);
     justify-content: space-between;
     flex-grow: 1;
-    // @media (max-width: 1225px) {
-    //   flex-grow: 1;
-    // }
+    flex-wrap: wrap;
+
     @media (max-width: 36.0625em) {
       flex-direction: column;
-      gap: 25px;
+      gap: 1.5625rem;
       flex-grow: 1;
     }
   }
@@ -139,7 +138,7 @@
   &__career {
     display: flex;
     @include adaptiveValue(gap, 35, 15);
-    flex: 0 1 485px;
+    flex: 0 1 30.3125rem;
   }
 
   // .footer__career-icon
@@ -175,7 +174,7 @@
   // .footer__career-text
 
   &__career-text {
-    font-size: 16px;
+    font-size: 1rem;
     line-height: 1.5;
     @media (max-width: 36.0625em) {
       display: none;
@@ -213,15 +212,17 @@
   // .footer-column__list
 
   &__list {
-    display: flex;
-    flex-direction: column;
-    @include adaptiveValue(gap, 20, 15);
+    // display: flex;
+    // flex-direction: column;
+    // @include adaptiveValue(gap, 20, 15);
+
     overflow: hidden;
     transition: height 0.3s ease;
   }
   // .footer-column__item
   &__item {
     font-size: 1rem;
+    @include adaptiveValue(margin-bottom, 20, 15);
     transition: text-decoration 0.3s ease;
     @media (hover: hover) {
       & {
@@ -246,7 +247,7 @@
   @include adaptiveValue(padding-top, 20, 10);
   @include adaptiveValue(padding-bottom, 50, 25);
   font-size: 0.875rem;
-  @media (max-width: 860px) {
+  @media (max-width: 53.75rem) {
     flex-direction: column;
     align-items: center;
     text-align: center;

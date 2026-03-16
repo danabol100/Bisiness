@@ -21,7 +21,7 @@
   &__header {
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 1rem;
   }
 
   // .process__subtitle
@@ -38,7 +38,7 @@
 
   &__description {
     display: block;
-    max-width: 984px;
+    max-width: 61.5rem;
     @include adaptiveValue(font-size, 24, 16);
     line-height: 1.33;
   }
@@ -48,13 +48,13 @@
   &__list {
     display: flex;
     flex-wrap: wrap;
-    gap: 40px 16px;
+    gap: 2.5rem 1rem;
   }
 
   // .process__item
 
   &__item {
-    flex: 1 0 300px;
+    flex: 1 0 18.75rem;
     display: flex;
     flex-direction: column;
     @include adaptiveValue(gap, 26, 16);
@@ -116,7 +116,7 @@
   &__item-description {
     @include adaptiveValue(font-size, 18, 14);
     opacity: 0.7;
-    max-width: 317px;
+    max-width: 19.8125rem;
     line-height: 1.33;
     @include adaptiveValue(margin-bottom, 26, 10);
   }
@@ -131,11 +131,13 @@
     &:after {
       content: "";
       display: inline-block;
+      vertical-align: middle;
+      justify-content: center;
       background: url("../../assets/arr.svg") no-repeat center center;
       background-size: contain;
-      width: 7px;
-      height: 7px;
-      margin-left: 11px;
+      width: 0.4375rem;
+      height: 0.4375rem;
+      margin-left: 0.6875rem;
       transition: transform 0.3s ease;
     }
     @media (hover: hover) {
@@ -144,7 +146,7 @@
           text-decoration: underline;
 
           &::after {
-            transform: translateX(2px);
+            transform: translateX(0.125rem);
           }
         }
       }
