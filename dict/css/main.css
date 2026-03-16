@@ -2681,18 +2681,18 @@ html:not([data-fls-touch]) .language__switcher {
 }
 @media (min-width: 20em) and (max-width: 88.875em) {
   .footer__bottom {
-    padding-bottom: clamp( 25px , 17.7404718693px  +  2.2686025408vw , 50px );
+    padding-bottom: clamp( 20px , 11.2885662432px  +  2.722323049vw , 50px );
   }
 }
 @media (max-width: 20em) {
   .footer__bottom {
-    padding-bottom: 25px;
+    padding-bottom: 20px;
   }
 }
 .footer__bottom {
   font-size: 0.875rem;
 }
-@media (max-width: 53.75rem) {
+@media (max-width: 53.75em) {
   .footer__bottom {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -2702,6 +2702,7 @@ html:not([data-fls-touch]) .language__switcher {
         -ms-flex-align: center;
             align-items: center;
     text-align: center;
+    gap: 10px;
   }
 }
 
